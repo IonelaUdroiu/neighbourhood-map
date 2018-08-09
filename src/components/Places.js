@@ -8,8 +8,8 @@ function Places (props) {
 	return (
 		<section>
 			<nav aria-label="Locations list" className="navbar navbar-dark">
-				<h1 className="navbar-brand">Craiova City Locations</h1>
-				<button className="navbar-toggler" type="button" data-toggle="collapse"
+				<h1 className="navbar-brand" tabIndex="1">Craiova City Locations</h1>
+				<button className="navbar-toggler" tabIndex="1" type="button" data-toggle="collapse"
 				data-target="#places-list" aria-expanded="false" aria-label="search places">
 					<span className="navbar-toggler-icon"></span>
 				</button>
@@ -24,7 +24,7 @@ function Places (props) {
 			  		value={props.query}
 			  		onClick={props.onInputClick}
 			  		onChange={props.onQueryChange}
-			  		autoFocus
+			  		//autoFocus
 			  		tabIndex="1"
 			  		aria-label="Type location name to filter locations"
 			  	/>
@@ -36,10 +36,10 @@ function Places (props) {
 							<li
 								className="list-group-item"
 								key={location.title}
-								tabIndex="2"
-								aria-label="Location"
+								tabIndex="-1"
+								//aria-label="Location"
 							>
-								<button type="button" onClick={props.onMarkerClick} className="btn btn-link">{location.title}</button>
+								<button type="button" onClick={props.onMarkerClick} className="btn btn-link" tabIndex="1">{location.title}</button>
 							</li>
 						)
 					})}
