@@ -1,0 +1,22 @@
+{
+  "name": "neighbourhood-map",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "escape-regexp": "0.0.1",
+    "google-maps-react": "^2.0.2",
+    "react": "^16.4.1",
+    "react-burger-menu": "^2.5.2",
+    "react-dom": "^16.4.2",
+    "react-hamburger-button": "0.0.1",
+    "react-scripts": "1.1.4",
+    "reactjs-popup": "^1.1.1",
+    "superagent": "^3.5.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
