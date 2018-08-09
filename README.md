@@ -1,6 +1,10 @@
 # neighbourhood-map
 
-#Project Overview: The project offers the possibility to filter a list of locations on Google Maps, from a given area. The project was bootstrapped with Create React App. This project was part of Udacity FEND Nanodegree.
+#Project Overview
+The project offers the possibility to filter a list of locations on Google Maps, from a given area. 
+The project was bootstrapped with Create React App. 
+Google Maps API and Foursquare API are used for fetching map and locations.
+This project was part of Udacity FEND Nanodegree.
 
 #How to Install the Project
 
