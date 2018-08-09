@@ -12,16 +12,6 @@ class MapContainer extends Component {
 	  showingInfoWindow: false
 	}
 
-	//Google Maps API error handler
-  componentDidUpdate(prevProps, prevState) {
-  	if (prevProps.google !== this.props.google) {
-      this.loadMap();
-    } else {
-      console.log('Google Maps API error');
-      alert('The map could not be fetched from Google.');
-    }
-  }
-
 	onMarkerClick = (props, marker, e) => {
 	  this.setState({
 	    activeMarker: marker,
