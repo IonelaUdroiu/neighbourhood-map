@@ -8,7 +8,7 @@ class App extends Component {
   state = {
   	locations: [],
   	locationDetails: {},
-  	query: ''
+  	query: '',
   }
 
   // Fetch locations from Forsquare
@@ -37,7 +37,7 @@ class App extends Component {
   }
 
   onMarkerClick = event => {
-  	this.setState({
+  	 this.setState({
   		query: event.target.textContent
   	})
   	for (const location of this.state.locations) {
@@ -47,6 +47,12 @@ class App extends Component {
   			})
   		}
   	}
+  }
+
+  onMarkerClick = event => {
+  	 this.setState({
+  		query: event.target.textContent
+  	})
   }
 
   onInputClick = event => {
