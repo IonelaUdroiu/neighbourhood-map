@@ -9,9 +9,14 @@ class App extends Component {
   	locations: [],
   	locationDetails: {},
   	query: '',
+  };
+
+  //Google Maps API error handler
+  gm_authFailure(){
+    window.alert("Google Maps error!")
   }
 
-  // Fetch locations from Forsquare
+  //Fetch locations from Forsquare and handle loading error
   componentDidMount() {
     fetch('https://api.foursquare.com/v2/venues/explore?ll=44.3301785,23.7948807&client_id=K5LTU5KVALWJJWS3OMU20Y2NU2TNFGF4WPKMKFQYM1C30TIB&client_secret=PSYKMZU3OAA2O4PLFLXBG5ILHSQ52JH4BTBRZTQJORA25KAA&v=20180731')
     .then(response => response.json())
@@ -34,6 +39,8 @@ class App extends Component {
       console.log('Foursquare error:', err);
       alert('Locations could not be fetched from Forsquare.');
     })
+    window.gm_authFailure = this.gm_authFailure;
+    console.log('Google Maps error!');
   }
 
   onMarkerClick = event => {
