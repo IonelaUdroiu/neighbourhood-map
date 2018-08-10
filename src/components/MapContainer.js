@@ -44,7 +44,7 @@ class MapContainer extends Component {
 						return (
 							<Marker
 								className="marker"
-								tabIndex="1"
+								tabIndex="0"
 								key={location.id}
 								position={{ lat: location.position.lat, lng: location.position.lng}}
 								title={location.title}
@@ -60,11 +60,11 @@ class MapContainer extends Component {
 				<InfoWindow
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}>
-					<div className="infowindow">
-					    <h5 tabIndex="1">{this.state.selectedPlace.title}</h5>
-					    <h6 tabIndex="1">{this.state.selectedPlace.category}</h6>
-					    <p tabIndex="1">Address: {this.state.selectedPlace.address}</p>
-              <p tabIndex="1"><em>Source: <a rel="noopener noreferrer" href="https://foursquare.com" target="_blank">Foursquare</a></em></p>
+					<div className="infowindow" tabIndex="0">
+					    <h5 tabIndex="0">{this.state.selectedPlace.title}</h5>
+					    <h6 tabIndex="0">{this.state.selectedPlace.category}</h6>
+					    <p tabIndex="0">Address: {this.state.selectedPlace.address}</p>
+              <p tabIndex="0"><em>Source: <a rel="noopener noreferrer" href="https://foursquare.com" target="_blank">Foursquare</a></em></p>
 				  </div>
 				</InfoWindow>
 			</Map>
